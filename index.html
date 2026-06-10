@@ -4,33 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Mario Rossi | Front-End Developer</title>
+  <title>Angela Allegretto | Biologa & Sustainability Specialist</title>
   <meta
     name="description"
-    content="Pagina personale professionale di Mario Rossi: profilo, competenze, esperienze, progetti e contatti rapidi."
+    content="Pagina personale professionale di Angela Allegretto: profilo, competenze, focus ESG, project management e contatti rapidi."
   />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Mario Rossi | Front-End Developer" />
+  <meta property="og:title" content="Angela Allegretto | Biologa & Sustainability Specialist" />
   <meta
     property="og:description"
-    content="Profilo professionale, competenze chiave, contatti rapidi ed esperienze in una pagina web personale."
+    content="Profilo professionale con focus su sostenibilità, project management, ESG e approccio scientifico."
   />
-  <!-- SOSTITUISCI con il tuo URL pubblico completo -->
-  <meta property="og:url" content="https://TUO-USERNAME.github.io/NOME-REPOSITORY/" />
-  <!-- SOSTITUISCI con il tuo URL pubblico completo della foto -->
-  <meta property="og:image" content="https://TUO-USERNAME.github.io/NOME-REPOSITORY/profile.jpg" />
+  <meta property="og:url" content="https://TUO-USERNAME.github.io/angelallegretto.github.io/" />
+  <meta property="og:image" content="https://TUO-USERNAME.github.io/angelallegretto.github.io/profile.jpg" />
   <meta property="og:locale" content="it_IT" />
-  <meta property="og:site_name" content="Mario Rossi - CV Online" />
+  <meta property="og:site_name" content="Angela Allegretto - CV Online" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Mario Rossi | Front-End Developer" />
+  <meta name="twitter:title" content="Angela Allegretto | Biologa & Sustainability Specialist" />
   <meta
     name="twitter:description"
-    content="Biglietto da visita digitale con profilo, competenze, progetti e contatti."
+    content="Biologa, Project Management, Sustainability & ESG."
   />
-  <meta name="twitter:image" content="https://TUO-USERNAME.github.io/NOME-REPOSITORY/profile.jpg" />
+  <meta name="twitter:image" content="https://TUO-USERNAME.github.io/angelallegretto.github.io/profile.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -128,4 +125,631 @@
     .topbar-inner {
       min-height: 72px;
       display: flex;
-      align-items: 
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-4);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-3);
+      font-weight: 800;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: var(--text);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 0.95rem;
+      box-shadow: var(--shadow);
+    }
+
+    .nav {
+      display: none;
+      gap: var(--space-4);
+      color: var(--muted);
+      font-size: var(--text-sm);
+      font-weight: 600;
+    }
+
+    .hero {
+      padding: var(--space-8) 0 var(--space-6);
+    }
+
+    .hero-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      gap: var(--space-6);
+      padding: var(--space-6);
+    }
+
+    .status-badge {
+      width: fit-content;
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: 0.55rem 0.9rem;
+      border-radius: var(--radius-full);
+      background: var(--success-soft);
+      color: var(--success-text);
+      font-size: var(--text-xs);
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: var(--space-4);
+    }
+
+    .profile-head {
+      display: flex;
+      align-items: center;
+      gap: var(--space-4);
+      flex-wrap: wrap;
+    }
+
+    .profile-photo {
+      width: 96px;
+      height: 96px;
+      object-fit: cover;
+      border-radius: 24px;
+      border: 3px solid var(--primary-soft);
+      background: var(--card-soft);
+    }
+
+    h1 {
+      font-size: var(--text-2xl);
+      line-height: 1.04;
+      letter-spacing: -0.03em;
+    }
+
+    .subtitle {
+      margin-top: var(--space-2);
+      font-size: var(--text-lg);
+      color: var(--muted);
+      font-weight: 600;
+      max-width: 34ch;
+    }
+
+    .tag-list,
+    .pill-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+    }
+
+    .tag-list {
+      margin-top: var(--space-4);
+    }
+
+    .tag,
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 0.7rem 0.95rem;
+      border-radius: var(--radius-full);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      border: 1px solid var(--line);
+      background: white;
+    }
+
+    .tag {
+      background: var(--primary-soft);
+      color: var(--primary-dark);
+      border-color: transparent;
+    }
+
+    .quick-box {
+      display: grid;
+      gap: var(--space-3);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--space-3);
+    }
+
+    .contact-link,
+    .cta-btn {
+      min-height: 52px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-2);
+      padding: 0.9rem 1rem;
+      border-radius: var(--radius-md);
+      font-size: var(--text-sm);
+      font-weight: 700;
+      transition: 180ms ease;
+    }
+
+    .contact-link {
+      background: white;
+      border: 1px solid var(--line);
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-3);
+    }
+
+    .cta-btn.primary {
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 10px 22px rgba(11, 107, 203, 0.22);
+    }
+
+    .cta-btn.secondary {
+      background: var(--card-soft);
+      border: 1px solid var(--line);
+    }
+
+    .contact-link:hover,
+    .cta-btn:hover,
+    .project-card:hover,
+    .timeline-card:hover,
+    .skills-card:hover {
+      transform: translateY(-2px);
+    }
+
+    main {
+      padding-bottom: var(--space-10);
+    }
+
+    .grid-main {
+      display: grid;
+      gap: var(--space-5);
+    }
+
+    .section-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+      box-shadow: var(--shadow);
+    }
+
+    .section-header {
+      margin-bottom: var(--space-4);
+    }
+
+    .eyebrow {
+      font-size: var(--text-xs);
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: var(--space-2);
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    .lead p + p {
+      margin-top: var(--space-3);
+    }
+
+    .lead p {
+      max-width: 70ch;
+    }
+
+    .timeline,
+    .projects-grid {
+      display: grid;
+      gap: var(--space-4);
+    }
+
+    .timeline-card,
+    .project-card,
+    .skills-card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 1.2rem;
+      padding: var(--space-4);
+      transition: 180ms ease;
+    }
+
+    .item-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: var(--space-3);
+      flex-wrap: wrap;
+      margin-bottom: var(--space-3);
+    }
+
+    .item-role {
+      font-size: var(--text-lg);
+      line-height: 1.2;
+      font-weight: 800;
+    }
+
+    .item-meta {
+      color: var(--muted);
+      font-size: var(--text-sm);
+      font-weight: 600;
+    }
+
+    .bullet-list {
+      list-style: none;
+      display: grid;
+      gap: var(--space-2);
+    }
+
+    .bullet-list li {
+      position: relative;
+      padding-left: 1rem;
+    }
+
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.72em;
+      width: 0.42rem;
+      height: 0.42rem;
+      border-radius: 50%;
+      background: var(--primary);
+      transform: translateY(-50%);
+    }
+
+    .skills-layout {
+      display: grid;
+      gap: var(--space-4);
+    }
+
+    .skills-title {
+      font-size: var(--text-sm);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: var(--space-3);
+    }
+
+    .footer-note {
+      text-align: center;
+      color: var(--muted);
+      font-size: var(--text-xs);
+      padding: var(--space-6) 0;
+    }
+
+    @media (min-width: 768px) {
+      .nav {
+        display: flex;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1.2fr 0.8fr;
+        align-items: center;
+        padding: var(--space-8);
+      }
+
+      .grid-main {
+        grid-template-columns: 1.1fr 0.9fr;
+      }
+
+      .span-2 {
+        grid-column: span 2;
+      }
+
+      .timeline,
+      .projects-grid,
+      .skills-layout {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-photo {
+        width: 88px;
+        height: 88px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <div class="brand-mark">AA</div>
+        <span>Angela Allegretto</span>
+      </div>
+
+      <nav class="nav" aria-label="Navigazione principale">
+        <a href="#profilo">Profilo</a>
+        <a href="#esperienze">Esperienze</a>
+        <a href="#progetti">Progetti</a>
+        <a href="#skills">Competenze</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-card">
+        <div class="hero-grid">
+          <div>
+            <div class="status-badge">
+              <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+              Profilo professionale
+            </div>
+
+            <div class="profile-head">
+              <img
+                src="./profile.jpg"
+                alt="Foto profilo professionale di Angela Allegretto"
+                class="profile-photo"
+                width="96"
+                height="96"
+                loading="eager"
+              />
+              <div>
+                <h1>Angela Allegretto</h1>
+                <p class="subtitle">Biologa & Sustainability Specialist</p>
+              </div>
+            </div>
+
+            <ul class="tag-list" role="list">
+              <li class="tag">Biologia</li>
+              <li class="tag">Project Management</li>
+              <li class="tag">Sustainability & ESG</li>
+              <li class="tag">Normative europee</li>
+            </ul>
+          </div>
+
+          <aside class="quick-box" aria-label="Contatti rapidi">
+            <div class="contact-grid">
+              <a class="contact-link" href="mailto:angela.allegretto@yahoo.com">
+                <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                <span>Email</span>
+              </a>
+
+              <a
+                class="contact-link"
+                href="https://www.linkedin.com/in/angela-allegretto-456840121/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                <span>LinkedIn</span>
+              </a>
+
+              <a class="contact-link" href="#skills">
+                <i class="fa-solid fa-seedling" aria-hidden="true"></i>
+                <span>Competenze</span>
+              </a>
+
+              <a class="contact-link" href="#profilo">
+                <i class="fa-solid fa-user" aria-hidden="true"></i>
+                <span>Profilo</span>
+              </a>
+            </div>
+
+            <div class="cta-row">
+              <a class="cta-btn primary" href="./manuale-cv.pdf" download>
+                <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
+                Scarica CV PDF
+              </a>
+
+              <a class="cta-btn secondary" href="#progetti">
+                <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+                Vedi progetti
+              </a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="grid-main">
+      <section id="profilo" class="section-card span-2">
+        <div class="section-header">
+          <div class="eyebrow">About me</div>
+          <h2>Profilo</h2>
+        </div>
+
+        <div class="lead">
+          <p>Biologa con mentalità scientifica applicata alla sostenibilità, con interesse per l’integrazione tra analisi, metodo e visione strategica.</p>
+          <p>Sto consolidando un percorso professionale orientato a Project Management, Sustainability ed ESG, con attenzione ai contesti normativi europei e alla gestione strutturata dei progetti.</p>
+          <p>Mi distinguo per approccio analitico, capacità organizzativa e volontà di trasformare temi complessi in attività concrete, misurabili e orientate al miglioramento.</p>
+        </div>
+      </section>
+
+      <section id="esperienze" class="section-card">
+        <div class="section-header">
+          <div class="eyebrow">Percorso</div>
+          <h2>Esperienze</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-card">
+            <div class="item-top">
+              <div>
+                <div class="item-role">Percorso in Sustainability Management</div>
+                <div class="item-meta">Formazione specialistica · Completato</div>
+              </div>
+            </div>
+            <ul class="bullet-list" role="list">
+              <li>Approfondite tematiche ESG, sostenibilità d’impresa e integrazione dei criteri ambientali, sociali e di governance.</li>
+              <li>Consolidata una visione trasversale tra conformità, strategia organizzativa e impatto sostenibile.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-card">
+            <div class="item-top">
+              <div>
+                <div class="item-role">Percorso in Project Management</div>
+                <div class="item-meta">Formazione in corso</div>
+              </div>
+            </div>
+            <ul class="bullet-list" role="list">
+              <li>Sviluppo di competenze nella pianificazione, nel coordinamento e nel monitoraggio delle attività progettuali.</li>
+              <li>Focus su organizzazione del lavoro, gestione degli stakeholder e orientamento ai risultati.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-card">
+            <div class="item-top">
+              <div>
+                <div class="item-role">Biologa</div>
+                <div class="item-meta">Background scientifico</div>
+              </div>
+            </div>
+            <ul class="bullet-list" role="list">
+              <li>Formazione scientifica orientata all’analisi, alla precisione metodologica e alla lettura critica dei dati.</li>
+              <li>Base disciplinare che supporta un approccio rigoroso ai temi di sostenibilità, qualità e miglioramento continuo.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="progetti" class="section-card">
+        <div class="section-header">
+          <div class="eyebrow">Focus professionale</div>
+          <h2>Progetti</h2>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="item-role">Sustainability & ESG</div>
+            <div class="item-meta" style="margin: 0.4rem 0 0.9rem;">Approccio strategico e normativo</div>
+            <ul class="bullet-list" role="list">
+              <li>Interesse per l’applicazione dei principi ESG in contesti organizzativi e progettuali.</li>
+              <li>Attenzione all’allineamento tra sostenibilità, requisiti normativi e valore generato per gli stakeholder.</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="item-role">Project Management</div>
+            <div class="item-meta" style="margin: 0.4rem 0 0.9rem;">Metodo, pianificazione, coordinamento</div>
+            <ul class="bullet-list" role="list">
+              <li>Applicazione di logiche di pianificazione, monitoraggio e organizzazione per gestire attività e priorità.</li>
+              <li>Orientamento a processi chiari, responsabilità definite e avanzamento misurabile.</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="item-role">Mentalità scientifica</div>
+            <div class="item-meta" style="margin: 0.4rem 0 0.9rem;">Analisi e rigore metodologico</div>
+            <ul class="bullet-list" role="list">
+              <li>Capacità di leggere problemi complessi con approccio strutturato e attenzione ai dati.</li>
+              <li>Attitudine al miglioramento continuo, alla precisione e alla valutazione critica dei contesti.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" class="section-card span-2">
+        <div class="section-header">
+          <div class="eyebrow">Competenze</div>
+          <h2>Hard & Soft Skills</h2>
+        </div>
+
+        <div class="skills-layout">
+          <div class="skills-card">
+            <div class="skills-title">Hard skills</div>
+            <ul class="pill-list" role="list">
+              <li class="pill">Biologia</li>
+              <li class="pill">Sustainability</li>
+              <li class="pill">ESG</li>
+              <li class="pill">Project Management</li>
+              <li class="pill">Normative europee</li>
+              <li class="pill">Analisi organizzativa</li>
+              <li class="pill">Stakeholder analysis</li>
+              <li class="pill">ISO 9001</li>
+              <li class="pill">PAS 24000</li>
+              <li class="pill">Gestione progetti</li>
+            </ul>
+          </div>
+
+          <div class="skills-card">
+            <div class="skills-title">Soft skills</div>
+            <ul class="pill-list" role="list">
+              <li class="pill">Pensiero analitico</li>
+              <li class="pill">Precisione</li>
+              <li class="pill">Organizzazione</li>
+              <li class="pill">Problem solving</li>
+              <li class="pill">Visione sistemica</li>
+              <li class="pill">Orientamento al miglioramento</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-card span-2">
+        <div class="section-header">
+          <div class="eyebrow">Contatti</div>
+          <h2>Contatti rapidi</h2>
+        </div>
+
+        <div class="contact-grid">
+          <a class="contact-link" href="mailto:angela.allegretto@yahoo.com">
+            <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+            <span>angela.allegretto@yahoo.com</span>
+          </a>
+
+          <a
+            class="contact-link"
+            href="https://www.linkedin.com/in/angela-allegretto-456840121/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            <span>LinkedIn</span>
+          </a>
+
+          <a class="contact-link" href="#profilo">
+            <i class="fa-solid fa-user" aria-hidden="true"></i>
+            <span>Profilo professionale</span>
+          </a>
+
+          <a class="contact-link" href="#skills">
+            <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+            <span>Competenze chiave</span>
+          </a>
+        </div>
+
+        <div class="cta-row" style="margin-top: 1rem;">
+          <a class="cta-btn primary" href="./manuale-cv.pdf" download>
+            <i class="fa-solid fa-file-pdf" aria-hidden="true"></i>
+            Scarica CV tradizionale
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <div class="footer-note">
+      © 2026 Angela Allegretto · Pagina personale ospitata su GitHub Pages.
+    </div>
+  </main>
+</body>
+</html>
