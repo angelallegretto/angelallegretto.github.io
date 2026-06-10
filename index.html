@@ -7,14 +7,14 @@
   <title>Angela Allegretto | Biologa & Sustainability Specialist</title>
   <meta
     name="description"
-    content="Pagina personale professionale di Angela Allegretto: profilo, competenze, focus ESG, project management e contatti rapidi."
+    content="Pagina personale professionale di Angela Allegretto: biologa, sustainability specialist, formazione, esperienze lavorative, competenze tecniche e contatti."
   />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Angela Allegretto | Biologa & Sustainability Specialist" />
   <meta
     property="og:description"
-    content="Profilo professionale con focus su sostenibilità, project management, ESG e approccio scientifico."
+    content="Profilo professionale con focus su sostenibilità, ESG, project management, formazione scientifica ed esperienze lavorative."
   />
   <meta property="og:url" content="https://TUO-USERNAME.github.io/angelallegretto.github.io/" />
   <meta property="og:image" content="https://TUO-USERNAME.github.io/angelallegretto.github.io/profile.jpg" />
@@ -25,7 +25,7 @@
   <meta name="twitter:title" content="Angela Allegretto | Biologa & Sustainability Specialist" />
   <meta
     name="twitter:description"
-    content="Biologa, Project Management, Sustainability & ESG."
+    content="Biologa, Sustainability Specialist, Project Management, ESG."
   />
   <meta name="twitter:image" content="https://TUO-USERNAME.github.io/angelallegretto.github.io/profile.jpg" />
 
@@ -51,8 +51,8 @@
       --primary: #0b6bcb;
       --primary-dark: #084f97;
       --primary-soft: #e7f1fd;
-      --success-soft: #e8f7ef;
-      --success-text: #1f6b46;
+      --accent: #16865c;
+      --accent-soft: #e8f7ef;
       --shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
 
       --radius-sm: 0.75rem;
@@ -182,8 +182,8 @@
       gap: var(--space-2);
       padding: 0.55rem 0.9rem;
       border-radius: var(--radius-full);
-      background: var(--success-soft);
-      color: var(--success-text);
+      background: var(--accent-soft);
+      color: #1f6b46;
       font-size: var(--text-xs);
       font-weight: 800;
       letter-spacing: 0.04em;
@@ -218,7 +218,7 @@
       font-size: var(--text-lg);
       color: var(--muted);
       font-weight: 600;
-      max-width: 34ch;
+      max-width: 38ch;
     }
 
     .tag-list,
@@ -301,8 +301,8 @@
 
     .contact-link:hover,
     .cta-btn:hover,
-    .project-card:hover,
     .timeline-card:hover,
+    .course-card:hover,
     .skills-card:hover {
       transform: translateY(-2px);
     }
@@ -348,17 +348,21 @@
     }
 
     .lead p {
-      max-width: 70ch;
+      max-width: none;
+      width: 100%;
     }
 
     .timeline,
-    .projects-grid {
+    .courses-grid,
+    .education-grid,
+    .skills-layout {
       display: grid;
       gap: var(--space-4);
     }
 
     .timeline-card,
-    .project-card,
+    .course-card,
+    .education-card,
     .skills-card {
       background: white;
       border: 1px solid var(--line);
@@ -411,11 +415,6 @@
       transform: translateY(-50%);
     }
 
-    .skills-layout {
-      display: grid;
-      gap: var(--space-4);
-    }
-
     .skills-title {
       font-size: var(--text-sm);
       font-weight: 800;
@@ -444,20 +443,16 @@
       }
 
       .grid-main {
-        grid-template-columns: 1.1fr 0.9fr;
+        grid-template-columns: 1fr;
       }
 
       .span-2 {
-        grid-column: span 2;
+        grid-column: auto;
       }
 
-      .timeline,
-      .projects-grid,
+      .courses-grid,
+      .education-grid,
       .skills-layout {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .contact-grid {
         grid-template-columns: 1fr 1fr;
       }
     }
@@ -485,7 +480,7 @@
       <nav class="nav" aria-label="Navigazione principale">
         <a href="#profilo">Profilo</a>
         <a href="#esperienze">Esperienze</a>
-        <a href="#progetti">Progetti</a>
+        <a href="#formazione">Formazione</a>
         <a href="#skills">Competenze</a>
       </nav>
     </div>
@@ -509,10 +504,10 @@
             </div>
 
             <ul class="tag-list" role="list">
-              <li class="tag">Biologia</li>
-              <li class="tag">Project Management</li>
+              <li class="tag">Diagnostica e ricerca</li>
+              <li class="tag">Analisi dati con R</li>
               <li class="tag">Sustainability & ESG</li>
-              <li class="tag">Normative europee</li>
+              <li class="tag">VSME</li>
             </ul>
           </div>
 
@@ -533,14 +528,14 @@
                 <span>LinkedIn</span>
               </a>
 
-              <a class="contact-link" href="#skills">
-                <i class="fa-solid fa-seedling" aria-hidden="true"></i>
-                <span>Competenze</span>
+              <a class="contact-link" href="#formazione">
+                <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                <span>Formazione</span>
               </a>
 
-              <a class="contact-link" href="#profilo">
-                <i class="fa-solid fa-user" aria-hidden="true"></i>
-                <span>Profilo</span>
+              <a class="contact-link" href="#skills">
+                <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                <span>Competenze</span>
               </a>
             </div>
 
@@ -550,9 +545,9 @@
                 Scarica CV PDF
               </a>
 
-              <a class="cta-btn secondary" href="#progetti">
+              <a class="cta-btn secondary" href="#esperienze">
                 <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
-                Vedi progetti
+                Vedi esperienze
               </a>
             </div>
           </aside>
@@ -570,15 +565,17 @@
         </div>
 
         <div class="lead">
-          <p>Biologa con mentalità scientifica applicata alla sostenibilità, con interesse per l’integrazione tra analisi, metodo e visione strategica.</p>
-          <p>Sto consolidando un percorso professionale orientato a Project Management, Sustainability ed ESG, con attenzione ai contesti normativi europei e alla gestione strutturata dei progetti.</p>
-          <p>Mi distinguo per approccio analitico, capacità organizzativa e volontà di trasformare temi complessi in attività concrete, misurabili e orientate al miglioramento.</p>
+          <p>Sono una biologa con una solida formazione nella ricerca sperimentale e un approccio scientifico orientato all’analisi, alla precisione metodologica e alla comprensione dei sistemi complessi. Il mio percorso accademico mi ha portata a lavorare su temi legati alla differenziazione neuronale, alla preparazione di campioni biologici e all’analisi dei dati, consolidando competenze in biostatistica, documentazione scientifica e utilizzo di R.
+
+Negli ultimi mesi ho esteso questa base scientifica al mondo della sostenibilità, approfondendo l’integrazione dei criteri ESG nei processi organizzativi e l’applicazione pratica di standard come ESRS, GRI e VSME. Attraverso percorsi formativi dedicati ho lavorato su stakeholder engagement, bilancio di sostenibilità, carbon footprint, LCA, piani di transizione e progetti di implementazione della ISO 9001:2015, sviluppando una visione sempre più concreta e interdisciplinare della sostenibilità.
+
+Mi interessa contribuire in contesti in cui ricerca, metodo e sostenibilità possano dialogare in modo efficace, trasformando l’analisi in azioni strutturate e risultati misurabili. Porto con me rigore scientifico, capacità organizzativa, problem solving e attenzione alla qualità, con l’obiettivo di supportare progetti che uniscano innovazione, responsabilità e impatto positivo.</p>
         </div>
       </section>
 
-      <section id="esperienze" class="section-card">
+      <section id="esperienze" class="section-card style=grid-column:1 /-1;">
         <div class="section-header">
-          <div class="eyebrow">Percorso</div>
+          <div class="eyebrow">Esperienze lavorative</div>
           <h2>Esperienze</h2>
         </div>
 
@@ -586,75 +583,98 @@
           <article class="timeline-card">
             <div class="item-top">
               <div>
-                <div class="item-role">Percorso in Sustainability Management</div>
-                <div class="item-meta">Formazione specialistica · Completato</div>
+                <div class="item-role">Tutor privata</div>
+                <div class="item-meta">Milano, IT · Apr. 2020 – in corso</div>
               </div>
             </div>
             <ul class="bullet-list" role="list">
-              <li>Approfondite tematiche ESG, sostenibilità d’impresa e integrazione dei criteri ambientali, sociali e di governance.</li>
-              <li>Consolidata una visione trasversale tra conformità, strategia organizzativa e impatto sostenibile.</li>
+              <li>Attività di tutoring individuale in biologia, chimica e scienze, con forte orientamento alla semplificazione di concetti complessi e al supporto personalizzato allo studio.[file:255]</li>
+              <li>Gestione autonoma di pianificazione, relazione con gli studenti e monitoraggio dei progressi, con approccio strutturato e orientato ai risultati.[file:255]</li>
             </ul>
           </article>
 
           <article class="timeline-card">
             <div class="item-top">
               <div>
-                <div class="item-role">Percorso in Project Management</div>
-                <div class="item-meta">Formazione in corso</div>
+                <div class="item-role">Biologo</div>
+                <div class="item-meta">Cerba Healthcare, Milano · Gen. 2022 – Lug. 2022</div>
               </div>
             </div>
             <ul class="bullet-list" role="list">
-              <li>Sviluppo di competenze nella pianificazione, nel coordinamento e nel monitoraggio delle attività progettuali.</li>
-              <li>Focus su organizzazione del lavoro, gestione degli stakeholder e orientamento ai risultati.</li>
-            </ul>
-          </article>
-
-          <article class="timeline-card">
-            <div class="item-top">
-              <div>
-                <div class="item-role">Biologa</div>
-                <div class="item-meta">Background scientifico</div>
-              </div>
-            </div>
-            <ul class="bullet-list" role="list">
-              <li>Formazione scientifica orientata all’analisi, alla precisione metodologica e alla lettura critica dei dati.</li>
-              <li>Base disciplinare che supporta un approccio rigoroso ai temi di sostenibilità, qualità e miglioramento continuo.</li>
+              <li>Gestione di oltre 300 campioni SARS-CoV-2 al giorno, garantendo accuratezza operativa, rispetto delle procedure e capacità di lavorare efficacemente sotto pressione.[file:255]</li>
+              <li>Coordinamento e classificazione di oltre 300 consensi informati giornalieri, con presidio della conformità normativa e ottimizzazione dei flussi documentali.[file:255]</li>
+              <li>Esecuzione di test HIV e HPV a supporto di processi diagnostici rapidi e affidabili, con operatività allineata a GLP e SOP di diagnostica molecolare.[file:255]</li>
+              <li>Affiancamento e formazione di una nuova collega su procedure di laboratorio, gestione campioni e flussi operativi.[file:255]</li>
             </ul>
           </article>
         </div>
       </section>
 
-      <section id="progetti" class="section-card">
+      <section id="formazione" class="section-card style=grid-column:1 /-1;">
         <div class="section-header">
-          <div class="eyebrow">Focus professionale</div>
-          <h2>Progetti</h2>
+          <div class="eyebrow">Corsi di formazione</div>
+          <h2>Corsi</h2>
         </div>
 
-        <div class="projects-grid">
-          <article class="project-card">
-            <div class="item-role">Sustainability & ESG</div>
-            <div class="item-meta" style="margin: 0.4rem 0 0.9rem;">Approccio strategico e normativo</div>
+        <div class="courses-grid">
+          <article class="course-card">
+            <div class="item-top">
+              <div>
+                <div class="item-role">Business & Sustainability Management</div>
+                <div class="item-meta">Formaper Società Benefit, Milano · Apr. 2026 – Mag. 2026</div>
+              </div>
+            </div>
             <ul class="bullet-list" role="list">
-              <li>Interesse per l’applicazione dei principi ESG in contesti organizzativi e progettuali.</li>
-              <li>Attenzione all’allineamento tra sostenibilità, requisiti normativi e valore generato per gli stakeholder.</li>
+              <li>Percorso intensivo su gestione aziendale e integrazione dei criteri ESG nei processi organizzativi, con applicazione pratica su case study aziendali.[file:255]</li>
+              <li>Approfondimento di ESRS, GRI e VSME, stakeholder engagement, catena del valore, hotspot di sostenibilità, ISO 9001:2015, carbon footprint, LCA e bilancio di sostenibilità.[file:255]</li>
+              <li>Sviluppo di deliverable consulenziali, piani di sostenibilità e transizione, presentazioni strutturate e attività di coordinamento nei lavori di gruppo.[file:255]</li>
             </ul>
           </article>
 
-          <article class="project-card">
-            <div class="item-role">Project Management</div>
-            <div class="item-meta" style="margin: 0.4rem 0 0.9rem;">Metodo, pianificazione, coordinamento</div>
+          <article class="course-card">
+            <div class="item-top">
+              <div>
+                <div class="item-role">Project Management</div>
+                <div class="item-meta">Formaper Società Benefit, Milano · Feb. 2026 – Mar. 2026</div>
+              </div>
+            </div>
             <ul class="bullet-list" role="list">
-              <li>Applicazione di logiche di pianificazione, monitoraggio e organizzazione per gestire attività e priorità.</li>
-              <li>Orientamento a processi chiari, responsabilità definite e avanzamento misurabile.</li>
+              <li>Formazione pratica su pianificazione, coordinamento e monitoraggio di progetti, con gestione di risorse interne ed esterne e risoluzione degli imprevisti.[file:255]</li>
+              <li>Sviluppo di competenze su metodologie strutturate di project management e utilizzo di strumenti professionali, con approccio learn by doing.[file:255]</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-card span-2">
+        <div class="section-header">
+          <div class="eyebrow">Istruzione</div>
+          <h2>Percorso accademico</h2>
+        </div>
+
+        <div class="education-grid">
+          <article class="education-card">
+            <div class="item-top">
+              <div>
+                <div class="item-role">Laurea Magistrale in Biologia</div>
+                <div class="item-meta">Università di Milano-Bicocca, Milano · Mar. 2025</div>
+              </div>
+            </div>
+            <ul class="bullet-list" role="list">
+              <li>Tesi sperimentale su “Meccanismi fisiologici coinvolti nella differenziazione neuronale indotta da stimolazione termica”, con tirocinio di ricerca focalizzato sul recettore TRPV1.[file:255]</li>
+              <li>Solida base in biostatistica, analisi dati con R e redazione di procedure e documentazione secondo standard scientifici.[file:255]</li>
             </ul>
           </article>
 
-          <article class="project-card">
-            <div class="item-role">Mentalità scientifica</div>
-            <div class="item-meta" style="margin: 0.4rem 0 0.9rem;">Analisi e rigore metodologico</div>
+          <article class="education-card">
+            <div class="item-top">
+              <div>
+                <div class="item-role">Laurea Triennale in Scienze Biologiche</div>
+                <div class="item-meta">Università degli Studi di Napoli Federico II, Napoli · Apr. 2020</div>
+              </div>
+            </div>
             <ul class="bullet-list" role="list">
-              <li>Capacità di leggere problemi complessi con approccio strutturato e attenzione ai dati.</li>
-              <li>Attitudine al miglioramento continuo, alla precisione e alla valutazione critica dei contesti.</li>
+              <li>Tesi sperimentale su “Preparazione di tessuti Danio rerio per analisi istologica”, con esperienza su preparazione campioni e analisi morfologica di cellule e tessuti.[file:255]</li>
             </ul>
           </article>
         </div>
@@ -670,28 +690,37 @@
           <div class="skills-card">
             <div class="skills-title">Hard skills</div>
             <ul class="pill-list" role="list">
-              <li class="pill">Biologia</li>
-              <li class="pill">Sustainability</li>
-              <li class="pill">ESG</li>
               <li class="pill">Project Management</li>
-              <li class="pill">Normative europee</li>
-              <li class="pill">Analisi organizzativa</li>
-              <li class="pill">Stakeholder analysis</li>
-              <li class="pill">ISO 9001</li>
-              <li class="pill">PAS 24000</li>
-              <li class="pill">Gestione progetti</li>
+              <li class="pill">Analisi dati</li>
+              <li class="pill">ESG & Sustainability Management</li>
+              <li class="pill">Carbon Footprint</li>
+              <li class="pill">Bilancio di sostenibilità</li>
+              <li class="pill">Piani di transizione</li>
+              <li class="pill">ESRS</li>
+              <li class="pill">GRI</li>
+              <li class="pill">VSME</li>
+              <li class="pill">R</li>
+              <li class="pill">Redazione documentale</li>
+              <li class="pill">Presentazioni e reporting</li>
+              <li class="pill">ISO 9001:2015</li>
+              <li class="pill">LCA</li>
+              <li class="pill">Stakeholder engagement</li>
             </ul>
           </div>
 
           <div class="skills-card">
             <div class="skills-title">Soft skills</div>
             <ul class="pill-list" role="list">
-              <li class="pill">Pensiero analitico</li>
-              <li class="pill">Precisione</li>
-              <li class="pill">Organizzazione</li>
               <li class="pill">Problem solving</li>
-              <li class="pill">Visione sistemica</li>
-              <li class="pill">Orientamento al miglioramento</li>
+              <li class="pill">Coordinamento del team</li>
+              <li class="pill">Capacità di esposizione</li>
+              <li class="pill">Pianificazione autonoma</li>
+              <li class="pill">Orientamento ai risultati</li>
+              <li class="pill">Lavoro sotto pressione</li>
+              <li class="pill">Precisione operativa</li>
+              <li class="pill">Semplificazione di concetti complessi</li>
+              <li class="pill">Supporto personalizzato</li>
+              <li class="pill">Monitoraggio dei progressi</li>
             </ul>
           </div>
         </div>
@@ -719,9 +748,9 @@
             <span>LinkedIn</span>
           </a>
 
-          <a class="contact-link" href="#profilo">
-            <i class="fa-solid fa-user" aria-hidden="true"></i>
-            <span>Profilo professionale</span>
+          <a class="contact-link" href="#formazione">
+            <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+            <span>Formazione</span>
           </a>
 
           <a class="contact-link" href="#skills">
